@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  assetops:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./it_assets.db:/usr/src/app/it_assets.db
+    environment:
+      - PORT=3000
+      - DB_PATH=./it_assets.db
+    restart: always

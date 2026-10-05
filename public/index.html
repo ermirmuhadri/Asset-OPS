@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AssetOps - IT Asset & Service Desk</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="navbar">
+      <h1>AssetOps <span>IT Management</span></h1>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3>Összes eszköz</h3>
+        <p id="stat-total-assets">-</p>
+      </div>
+      <div class="stat-card warning">
+        <h3>Szervizben</h3>
+        <p id="stat-repair-assets">-</p>
+      </div>
+      <div class="stat-card">
+        <h3>Nyitott hibajegyek</h3>
+        <p id="stat-open-tickets">-</p>
+      </div>
+      <div class="stat-card danger">
+        <h3>Kritikus hibák</h3>
+        <p id="stat-critical-tickets">-</p>
+      </div>
+    </section>
+
+    <main class="content-grid">
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Eszközök (Assets)</h2>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Gyári szám</th>
+                <th>Státusz</th>
+                <th>Hozzárendelve</th>
+              </tr>
+            </thead>
+            <tbody id="assets-table-body">
+              <tr><td colspan="5" class="loading">Adatok betöltése...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Hibajegyek (Tickets)</h2>
+        </div>
+        <div id="tickets-list" class="tickets-list">
+          <p class="loading">Adatok betöltése...</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
